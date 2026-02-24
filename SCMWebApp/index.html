@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Cleaning Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar navigation -->
+  <nav>
+    <img src="img/logo-1.png" class="mainimg">
+    <a class="menuitemactive" href="#">Dashboard</a>
+    <a class="menuitem" href="projecten.html">Projecten</a>
+    <a class="menuitem" href="wasstatus.html">Was Status</a>
+    <a class="menuitem" href="ziekenhuisdashboard.html">Billing</a>
+    <a class="menuitem" href="#">Settings</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <div class="topbar">
+        <h2 class="topbartext">Dashboard</h2>
+        <input placeholder="Zoek Project..." class="searchbar">
+        <div class="loggedin-container">
+    <div class="loggedinbox">
+        <img class="smallimage" src="img/avatar.png" alt="User avatar">
+        <h3 class="topbartextsmall">Admin</h3>
+    </div>
+    <div class="dropdownmenu">
+        <a href="#">Profiel</a>
+        <a href="#">Instellingen</a>
+        <a href="#">Uitloggen</a>
+    </div>
+</div>
+    </div>
+    <div class="kpi-grid fadein marginsides1">
+    <div class="card">
+        <h2>Planning: </h2>
+        <ul>
+            <li class="cardlistitemclick">AMC Verdieping 2 <img src="img/check.png" class="ulicon"></li>
+            <li class="cardlistitemclick">AMC Verdieping 3 <img src="img/check.png" class="ulicon"></li>
+            <li class="cardlistitemclick">AMC Verdieping 4<img src="img/check.png" class="ulicon"></li>
+            <li class="cardlistitemclick">Deventer Ziekenhuis<img src="img/progress.png" class="ulicon"></li>
+            <li class="cardlistitemclick">Groningen Ziekenhuis<img src="img/progress.png" class="ulicon"></li>
+            <li class="cardlistitemclick">Breda Ziekenhuis<img src="img/agenda.png" class="ulicon"></li>
+        </ul>
+        <h2>Morgen:</h2>
+        <ul>
+            <li class="cardlistitemclick">AMC Verdieping 5<img src="img/agenda.png" class="ulicon"></li>
+              <li class="cardlistitemclick">AMC Verdieping 6<img src="img/agenda.png" class="ulicon"></li>
+                <li class="cardlistitemclick">AMC Verdieping 7<img src="img/agenda.png" class="ulicon"></li>
+        </ul>
+    </div>
+    <div class="card">
+    <div class="statscard">
+        <a class="cardstatslink">
+        <div class="progress-circle2 center" data-progress="70">
+    <span>97%</span>
+    </div>
+      <p class="diagramtext">Wagen 1</p>
+    </a>
+    <a class="cardstatslink">
+<div class="progress-circle center" data-progress="70">
+    <span class="marginsides1">41%</span>
+</div>
+  <p class="diagramtext">Wagen 2</p>
+</a>
+</div>
+<a class="cardstatslink">
+   <div class="statscard">
+        <div class="progress-circle3 center" data-progress="70">
+    <span>13%</span>
+
+    </div>
+      <p class="diagramtext">Wagen 3</p>
+</a>
+<a class="cardstatslink">
+<div class="progress-circle4 center" data-progress="70">
+    <span>75%</span>
+</div>
+  <p class="diagramtext">Wagen 4</p>
+</a>
+</div>
+
+   <div class="statscard">
+    <a class="cardstatslink">   
+        <div class="progress-circle center" data-progress="70">
+    <span>58%</span>
+    </div>
+    <p class="diagramtext">Wagen 5</p>
+
+     </a>
+</div>
+
+    </div>
+    <div class="smallcardbox">
+    <div class="cardsmall">
+        <h2>M2 Gewassen</h2>
+        <ul>
+            <li class="cardlistitem"><p>Vandaag</p><p class="ulvalue">3.243</p></li>
+            <li class="cardlistitem"><p>Deze Week</p><p class="ulvalue">11.724</p></li>
+            <li class="cardlistitem"><p>Totaal</p><p class="ulvalue">190.842</p></li>
+        </ul>
+    </div>
+       <div class="cardsmall">
+        <h2>Aantal Gewassen</h2>
+        <ul>
+            <li class="cardlistitem"><p>Vandaag</p><p class="ulvalue">398</p></li>
+            <li class="cardlistitem"><p>Deze Week</p><p class="ulvalue">1.342</p></li>
+            <li class="cardlistitem"><p>Totaal</p><p class="ulvalue">20.032</p></li>
+        </ul>
+    </div>
+    <div class="cardsmall">
+        <div class="buttonrow">
+        <button class="mainbutton">Klik Hier</button>
+        <button class="secondarybutton">Klik Hier</button>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="cardsmall marginsides1">
+
+  <div class="barchart-row">
+
+    <!-- LEFT CHART -->
+    <div class="barchart-wrapper fadein">
+      <h3 class="chart-title">m² gewassen</h3>
+
+      <div class="barchart-container">
+        <div class="y-axis">
+          <span>5000</span>
+          <span>4000</span>
+          <span>3000</span>
+          <span>2000</span>
+          <span>1000</span>
+          <span>0</span>
+        </div>
+
+        <div class="chart">
+          <div class="bar-group">
+            <div class="bar" style="height: 80%"></div>
+            <span>Vandaag</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 65%"></div>
+            <span>Gisteren</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 50%"></div>
+            <span>Eergisteren</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 40%"></div>
+            <span>-3 dagen</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 30%"></div>
+            <span>-4 dagen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="vertical-divider"></div>
+
+    <!-- RIGHT CHART -->
+    <div class="barchart-wrapper">
+      <h3 class="chart-title">Aantallen</h3>
+
+      <div class="barchart-container">
+        <div class="y-axis">
+          <span>500</span>
+          <span>400</span>
+          <span>300</span>
+          <span>200</span>
+          <span>100</span>
+          <span>0</span>
+        </div>
+
+        <div class="chart">
+          <div class="bar-group">
+            <div class="bar" style="height: 80%"></div>
+            <span>Vandaag</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 65%"></div>
+            <span>Gisteren</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 50%"></div>
+            <span>Eergisteren</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 40%"></div>
+            <span>-3 dagen</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 30%"></div>
+            <span>-4 dagen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+    </div>
+    
+    
+    </div>
+    
+  </main>
+
+</body>
+</html>

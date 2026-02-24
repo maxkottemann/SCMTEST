@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Cleaning Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar navigation -->
+  <nav>
+    <img src="img/logo-1.png" class="mainimg">
+    <a class="menuitemactive" href="#">Dashboard</a>
+    <a class="menuitem" href="#">Was Status</a>
+    <a class="menuitem" href="#">Settings</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <div class="topbar">
+        <h2 class="topbartext">AMC Ziekenhuis</h2>
+        <input placeholder="Zoek Project..." class="searchbar">
+        <div class="loggedin-container">
+    <div class="loggedinbox">
+        <img class="smallimage" src="img/avatar.png" alt="User avatar">
+        <h3 class="topbartextsmall">Admin</h3>
+    </div>
+    <div class="dropdownmenu">
+        <a href="#">Profiel</a>
+        <a href="#">Instellingen</a>
+        <a href="#">Uitloggen</a>
+    </div>
+    </div>
+    </div>
+
+    <div class="spacebetweenbox margin2 fadein">
+        <h2 class="pageheadertext">Project: AMC Verdieping 2</h2>
+    <div class="dropdown">
+    <button class="dropdown-toggle">
+        AMC Verdieping 2
+        <span class="chevron">▾</span>
+    </button>
+
+    <div class="dropdown-menu">
+        <div class="dropdown-item active">AMC Verdieping 2</div>
+        <div class="dropdown-item">AMC Verdieping 3</div>
+        <div class="dropdown-item">AMC Verdieping 4</div>
+        <div class="dropdown-item">AMC Verdieping 5</div>
+        <div class="dropdown-item">AMC Verdieping 6</div>
+    </div>
+</div>
+    </div>
+
+
+    <div class="kpi-grid fadein2 marginsides1">
+         <div class="cardfitcontent statcardheight">
+            <h3 class="blacktext">Voortgang</h3>
+        <div class="piechart-container center">
+            <div class="piechart-canvas">
+                <canvas id="wagen1-piechart"></canvas>
+            </div>
+            <div class="piechart-legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #2563eb"></span>
+                    <span class="legend-label">Gewassen</span>
+                    <span class="legend-value" id="gewassen-legend">68%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #EF4444;"></span>
+                    <span class="legend-label">Nog Te Doen</span>
+                    <span class="legend-value" id="ongewassen-legend"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cardfitcontent statcardheight">
+        <h3 class="blacktext">Distributie</h3>
+           <div class="piechart-container center">
+            <div class="piechart-canvas">
+                <canvas id="wagen1-piechart2"></canvas>
+            </div>
+            <div class="piechart-legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #2563eb;"></span>
+                    <span class="legend-label">Gordijn</span>
+                    <span class="legend-value">60%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #f59e00;"></span>
+                    <span class="legend-label">Vitrage</span>
+                    <span class="legend-value">15%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #ef4444;"></span>
+                    <span class="legend-label">Bedgordijn</span>
+                    <span class="legend-value">10%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #4ca150;"></span>
+                    <span class="legend-label">Douchegordijn</span>
+                    <span class="legend-value">15%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="smallcardbox">
+    <div class="cardsmall">
+        <h3 class="blacktext">M2 Gewassen</h3>
+        <ul>
+            <li class="cardlistitem"><p>Vandaag</p><p class="ulvalue">3.243</p></li>
+            <li class="cardlistitem"><p>Dit Project</p><p class="ulvalue">11.724</p></li>
+            <li class="cardlistitem"><p>Totaal</p><p class="ulvalue">35.698</p></li>
+        </ul>
+    </div>
+       <div class="cardsmall">
+        <h3 class="blacktext">Aantal Gewassen</h3>
+        <ul>
+            <li class="cardlistitem"><p>Vandaag</p><p class="ulvalue">398</p></li>
+            <li class="cardlistitem"><p>Dit Project</p><p class="ulvalue">1.342</p></li>
+            <li class="cardlistitem"><p>Totaal</p><p class="ulvalue">4.912</p></li>
+        </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="wagen-content">
+            <div class="room-tracker" id="rooms-wagen-1">
+                <div class="table-container margin2left">
+                    <table class="cardtable fadein3">
+                        <thead>
+                            <tr>
+                                <th>Kamer</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Opmerkingen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="completedrow">
+                                <td>101</td>
+                                <td>Gordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>102</td>
+                                <td>Gordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>103</td>
+                                <td>Vitrage</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>104</td>
+                                <td>Gordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>105</td>
+                                <td>Bedgordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>106</td>
+                                <td>Douchegordijn</td>
+                                <td><p class="uncompletedtext">Niet Uitgevoerd</p></td>
+                                <td>Patient Ziek</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>107</td>
+                                <td>Bedgordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>108</td>
+                                <td>Gordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>109</td>
+                                <td>Vitrage</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>110</td>
+                                <td>Bedgordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>111</td>
+                                <td>Douchegordijn/td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>112</td>
+                                <td>Vitrage</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr class="completedrow">
+                                <td>113</td>
+                                <td>Gordijn</td>
+                                <td><p class="completedtext">Gewassen</p></td>
+                                <td>Geen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+  </main>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    
+    if (!dropdown || !dropdownToggle) return;
+    
+    // Toggle dropdown on click
+    dropdownToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+    });
+    
+    // Handle item selection
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Remove active from all items
+            dropdownItems.forEach(i => i.classList.remove('active'));
+            
+            // Add active to clicked item
+            this.classList.add('active');
+            
+            // Update button text (keep the chevron)
+            const selectedText = this.textContent.trim();
+            dropdownToggle.innerHTML = `${selectedText} <span class="chevron">▾</span>`;
+            
+            // Close dropdown
+            dropdown.classList.remove('active');
+            
+            // Optional: Do something with the selection
+            console.log('Selected:', selectedText);
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+});
+    let myChart;
+function fillchart() {
+  const data = [
+    { gewassen: true },
+    { gewassen: true },
+    { gewassen: true },
+    { gewassen: false },
+    { gewassen: false },
+  ];
+
+  const truecount  = data.filter(f => f.gewassen).length;
+  const falsecount = data.filter(f => !f.gewassen).length;
+
+  const total = truecount + falsecount;
+
+  const truepercent  = ((truecount  / total) * 100).toFixed(1);
+  const falsepercent = ((falsecount / total) * 100).toFixed(1);
+
+  const dataValues = [truecount, falsecount];
+
+  document.getElementById("gewassen-legend").innerText  = truepercent  + '%';
+  document.getElementById("ongewassen-legend").innerText = falsepercent + '%';
+
+  if (myChart) {
+    myChart.data.datasets[0].data = dataValues;
+    myChart.update();
+  } else {
+    const ctx = document.getElementById("wagen1-piechart").getContext('2d');
+    myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Gewassen', 'Nog te doen'],
+        datasets: [{
+          data: dataValues,
+          backgroundColor: ['#2563eb', '#ef4444']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const dataset = context.dataset.data;
+                const total   = dataset.reduce((a, b) => a + b, 0);
+                const percent = ((context.parsed / total) * 100).toFixed(1);
+                return context.label + ': ' + percent + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    // Wagen 1 Pie Chart
+    const wagen1PieCanvas = document.getElementById('wagen1-piechart2');
+    
+    if (wagen1PieCanvas) {
+        const wagen1PieCtx = wagen1PieCanvas.getContext('2d');
+        const wagen1PieChart = new Chart(wagen1PieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Gordijn', 'Vitrage', 'Bedgordijn','Douchegordijn'],
+                datasets: [{
+                  data: [60, 15, 10, 15],
+                  backgroundColor: ['#2563eb', '#f59e0b', '#ef4444', '#4ca150'],
+                borderWidth: 3,
+                borderColor: '#ffffff'
+}]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    } else {
+        console.error('Canvas element wagen1-piechart not found!');
+    }
+});  
+fillchart();
+</script>
+
+</body>
+</html>
