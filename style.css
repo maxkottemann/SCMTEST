@@ -707,8 +707,8 @@ body, h1, h2, h3, a, td, th {
 .pagetitle {
   font-size: clamp(1.5rem, 3vw, 1.75rem);
   font-weight: 700;
-  color: var(--secondary-color);
-  margin: 0;
+  color: black;
+  margin: 0 1%;
 }
 
 .smallcardbox {
@@ -1296,3 +1296,4 @@ body, h1, h2, h3, a, td, th {
     width: 100%;
   }
 }
+
